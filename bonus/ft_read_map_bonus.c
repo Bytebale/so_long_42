@@ -1,16 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_read_map.c                                      :+:      :+:    :+:   */
+/*   ft_read_map_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lshonta <lshonta@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/03 19:15:11 by lshonta           #+#    #+#             */
-/*   Updated: 2021/12/14 17:23:59 by lshonta          ###   ########.fr       */
+/*   Updated: 2021/12/14 18:12:49 by lshonta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "so_long_bonus.h"
+
+int	ft_exit(t_init_map *data)
+{
+	exit(EXIT_SUCCESS);
+}
 
 void	ft_map_hight(t_init_map *data)
 {
@@ -37,7 +42,9 @@ void	ft_map_hight(t_init_map *data)
 		free(line);
 		line = get_next_line(fd);
 	}
+	free(line);
 	line = NULL;
+	// system("leaks a.out");
 	close(fd);
 }
 
@@ -60,5 +67,6 @@ void	ft_read_map(t_init_map *data)
 	data->map[i] = NULL;
 	free(line);
 	line = NULL;
+	// system("leaks a.out");
 	close(fd);
 }

@@ -1,39 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_create_map.c                                    :+:      :+:    :+:   */
+/*   ft_create_map_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lshonta <lshonta@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/07 17:59:53 by lshonta           #+#    #+#             */
-/*   Updated: 2021/12/14 00:39:29 by lshonta          ###   ########.fr       */
+/*   Updated: 2021/12/14 18:22:35 by lshonta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "so_long_bonus.h"
 
-int	ft_exit(t_init_map *data)
+void	ft_draw_enemy(t_init_map *data, int *j, int *i)
 {
-	// int	i;
-
-	// i = 0;
-	// while (i < data->hight)
-	// {
-	// 	free(data->map[i]);
-	// 	data->map[i] = NULL;
-	// 	i++;
-	// }
-	// free(data->map);
-	// data->map = NULL;
-	// data->graph->collect = NULL;
-	// data->graph->empty = NULL;
-	// data->graph->exit = NULL;
-	// data->graph->player = NULL;
-	// data->graph->wall = NULL;
-	// data->graph->winner = NULL;
-	// free(data->graph);
-	// data->graph = NULL;
-	exit(EXIT_SUCCESS);
+	if (data->map[*i][*j] == 'X')
+	{
+		if (data->enemy == 1)
+			mlx_put_image_to_window(data->mlx, data->win,
+				data->graph->enemy_1, (*j) * 40, (*i) * 40);
+		if (data->enemy == 2)
+			mlx_put_image_to_window(data->mlx, data->win,
+				data->graph->enemy_2, (*j) * 40, (*i) * 40);
+    }
 }
 
 void	put_player_img(t_init_map *data, int *j, int *i)
@@ -46,8 +35,7 @@ void	put_player_img(t_init_map *data, int *j, int *i)
 
 void	put_wall_img(t_init_map *data, int *j, int *i)
 {
-	mlx_put_image_to_window(data->mlx, data->win,
-		data->graph->wall, (*j) * 40, (*i) * 40);
+	mlx_put_image_to_window(data->mlx, data->win, data->graph->wall, (*j) * 40, (*i) * 40);
 }
 
 void	put_empty_img(t_init_map *data, int *j, int *i)
@@ -79,6 +67,7 @@ void	ft_create_map(t_init_map *data)
 			else if (data->map[i][j] == 'C')
 				mlx_put_image_to_window(data->mlx, data->win,
 					data->graph->collect, j * 40, i * 40);
+			ft_draw_enemy(data, &j, &i);
 			j++;
 		}
 		j = 0, i++;

@@ -6,7 +6,7 @@
 /*   By: lshonta <lshonta@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/13 23:00:42 by lshonta           #+#    #+#             */
-/*   Updated: 2021/12/10 17:53:20 by lshonta          ###   ########.fr       */
+/*   Updated: 2021/12/14 00:47:06 by lshonta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,22 +99,3 @@ char	*get_next_line(int fd)
 	memory[fd] = ft_new_string(memory[fd]);
 	return (line);
 }
-
-// #include "stdio.h"
-// #include <fcntl.h>
-
-// int main()
-// {
-// 	int fd;
-
-// 	fd = open("../text", O_RDONLY);
-// 	char* line;
-// 	while ((line = get_next_line(fd)))
-// 	{
-// 		printf("%s\n", line);
-// 		line = get_next_line(fd);
-// 		free(line);
-// 		line = NULL;
-// 	}
-// 	close (fd);
-// }
