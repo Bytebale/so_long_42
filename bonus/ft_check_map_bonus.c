@@ -6,7 +6,7 @@
 /*   By: lshonta <lshonta@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 23:19:38 by lshonta           #+#    #+#             */
-/*   Updated: 2021/12/14 19:28:42 by lshonta          ###   ########.fr       */
+/*   Updated: 2021/12/14 19:53:36 by lshonta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -122,34 +122,18 @@ void	ft_char_set(t_init_map *data)
 		printf("Map error"), exit(EXIT_FAILURE);
 }
 
-void free_map(t_init_map *data)
-{
-	int i;
-
-	i = 0;
-	while (i < data->hight)
-	{
-		free(data->map[i]);
-		i++;
-	}
-	free(data->map);
-	free(data->graph);
-}
-
 void	ft_next_lvl(t_init_map *data)
 {
 	data->lvl++;
 	free_map(data);
-	
 	mlx_clear_window(data->mlx, data->win);
 	mlx_destroy_window(data->mlx, data->win);
 	ft_map_data(data, "maps/next_lvl.ber");
 	ft_map_hight(data);
 	ft_read_map(data);
 	ft_check(data);
-	
 	data->win = mlx_new_window(data->mlx, data->lenght * 40,
-				data->hight * 40, "cucumber");
+			data->hight * 40, "cucumber");
 	mlx_hook(data->win, 17, 0, ft_exit, data);
 	mlx_hook(data->win, 02, 0, press_key, data);
 	mlx_loop_hook(data->mlx, ft_frame, data);

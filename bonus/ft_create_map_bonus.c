@@ -6,23 +6,16 @@
 /*   By: lshonta <lshonta@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/07 17:59:53 by lshonta           #+#    #+#             */
-/*   Updated: 2021/12/14 18:22:35 by lshonta          ###   ########.fr       */
+/*   Updated: 2021/12/14 19:59:17 by lshonta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long_bonus.h"
 
-void	ft_draw_enemy(t_init_map *data, int *j, int *i)
+void	put_collect_img(t_init_map *data, int *j, int *i)
 {
-	if (data->map[*i][*j] == 'X')
-	{
-		if (data->enemy == 1)
-			mlx_put_image_to_window(data->mlx, data->win,
-				data->graph->enemy_1, (*j) * 40, (*i) * 40);
-		if (data->enemy == 2)
-			mlx_put_image_to_window(data->mlx, data->win,
-				data->graph->enemy_2, (*j) * 40, (*i) * 40);
-    }
+	mlx_put_image_to_window(data->mlx, data->win,
+		data->graph->collect, (*j) * 40, (*i) * 40);
 }
 
 void	put_player_img(t_init_map *data, int *j, int *i)
@@ -35,7 +28,8 @@ void	put_player_img(t_init_map *data, int *j, int *i)
 
 void	put_wall_img(t_init_map *data, int *j, int *i)
 {
-	mlx_put_image_to_window(data->mlx, data->win, data->graph->wall, (*j) * 40, (*i) * 40);
+	mlx_put_image_to_window(data->mlx, data->win,
+		data->graph->wall, (*j) * 40, (*i) * 40);
 }
 
 void	put_empty_img(t_init_map *data, int *j, int *i)
@@ -65,8 +59,7 @@ void	ft_create_map(t_init_map *data)
 				mlx_put_image_to_window(data->mlx, data->win,
 					data->graph->exit, j * 40, i * 40);
 			else if (data->map[i][j] == 'C')
-				mlx_put_image_to_window(data->mlx, data->win,
-					data->graph->collect, j * 40, i * 40);
+				put_collect_img(data, &j, &i);
 			ft_draw_enemy(data, &j, &i);
 			j++;
 		}

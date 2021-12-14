@@ -6,7 +6,7 @@
 /*   By: lshonta <lshonta@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/03 19:15:11 by lshonta           #+#    #+#             */
-/*   Updated: 2021/12/14 18:12:49 by lshonta          ###   ########.fr       */
+/*   Updated: 2021/12/14 20:00:56 by lshonta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,18 +33,12 @@ void	ft_map_hight(t_init_map *data)
 		data->lenght++;
 	while (line)
 	{
-		if (ft_strlen(line) != data->lenght)
-		{
-			printf("Error.Map not valide");
-			exit(EXIT_FAILURE);
-		}
 		data->hight++;
 		free(line);
 		line = get_next_line(fd);
 	}
 	free(line);
 	line = NULL;
-	// system("leaks a.out");
 	close(fd);
 }
 
@@ -60,6 +54,11 @@ void	ft_read_map(t_init_map *data)
 	i = 0;
 	while (line)
 	{
+		if (ft_strlen(line) != data->lenght)
+		{
+			printf("Error.Map not valide");
+			exit(EXIT_FAILURE);
+		}
 		data->map[i] = line;
 		line = get_next_line(fd);
 		i++;
@@ -67,6 +66,5 @@ void	ft_read_map(t_init_map *data)
 	data->map[i] = NULL;
 	free(line);
 	line = NULL;
-	// system("leaks a.out");
 	close(fd);
 }

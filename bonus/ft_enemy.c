@@ -6,7 +6,7 @@
 /*   By: lshonta <lshonta@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 19:22:59 by lshonta           #+#    #+#             */
-/*   Updated: 2021/12/14 00:44:25 by lshonta          ###   ########.fr       */
+/*   Updated: 2021/12/14 19:56:17 by lshonta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,4 +78,17 @@ void	ft_move_enemy(t_init_map *data)
 	times++;
 	if (times > 80)
 		times = 0;
+}
+
+void	ft_draw_enemy(t_init_map *data, int *j, int *i)
+{
+	if (data->map[*i][*j] == 'X')
+	{
+		if (data->enemy == 1)
+			mlx_put_image_to_window(data->mlx, data->win,
+				data->graph->enemy_1, (*j) * 40, (*i) * 40);
+		if (data->enemy == 2)
+			mlx_put_image_to_window(data->mlx, data->win,
+				data->graph->enemy_2, (*j) * 40, (*i) * 40);
+	}
 }

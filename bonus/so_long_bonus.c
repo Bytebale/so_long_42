@@ -6,7 +6,7 @@
 /*   By: lshonta <lshonta@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/03 17:38:50 by lshonta           #+#    #+#             */
-/*   Updated: 2021/12/14 18:28:33 by lshonta          ###   ########.fr       */
+/*   Updated: 2021/12/14 20:01:35 by lshonta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,9 +72,11 @@ int	ft_frame(t_init_map *data)
 	}
 	if (data->player == 0)
 		ft_lose(data);
-	else if (data->count == 0 && data->player == 1 && data->escape == 1 && data->lvl != 1)
+	else if (data->count == 0 && data->player == 1
+		&& data->escape == 1 && data->lvl != 1)
 		ft_next_lvl(data);
-	else if (data->count == 0 && data->player == 1 && data->escape == 1 && data->lvl == 1)
+	else if (data->count == 0 && data->player == 1
+		&& data->escape == 1 && data->lvl == 1)
 		ft_win(data);
 	return (0);
 }
@@ -85,7 +87,6 @@ int	main(int argc, char **argv)
 
 	if (argc == 2)
 	{
-		
 		data.mlx = mlx_init();
 		ft_map_data(&data, argv[1]);
 		ft_map_hight(&data);

@@ -6,7 +6,7 @@
 /*   By: lshonta <lshonta@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 20:33:10 by lshonta           #+#    #+#             */
-/*   Updated: 2021/12/14 18:14:25 by lshonta          ###   ########.fr       */
+/*   Updated: 2021/12/14 19:53:21 by lshonta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,4 +61,18 @@ char	*ft_itoa(int n)
 		return (NULL);
 	res = convert(res, n, len_n, minus);
 	return (res);
+}
+
+void	free_map(t_init_map *data)
+{
+	int	i;
+
+	i = 0;
+	while (i < data->hight)
+	{
+		free(data->map[i]);
+		i++;
+	}
+	free(data->map);
+	free(data->graph);
 }

@@ -6,7 +6,7 @@
 /*   By: lshonta <lshonta@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/03 17:38:42 by lshonta           #+#    #+#             */
-/*   Updated: 2021/12/14 19:20:42 by lshonta          ###   ########.fr       */
+/*   Updated: 2021/12/14 20:02:34 by lshonta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,6 @@ typedef struct s_graph
 	void	*enemy_1;
 	void	*enemy_2;
 	void	*loser;
-	
 }	t_graph;
 
 typedef struct s_init_map
@@ -67,7 +66,6 @@ typedef struct s_init_map
 	void	*mlx;
 	void	*win;
 	char	*fn;
-	
 	t_graph	*graph;
 
 }	t_init_map;
@@ -92,7 +90,8 @@ void	move_w(t_init_map *data);
 char	*ft_itoa(int n);
 void	ft_print_steps(t_init_map *data);
 void	ft_lose(t_init_map *data);
-void    ft_win(t_init_map *data);
+void	ft_win(t_init_map *data);
+void	put_collect_img(t_init_map *data, int *j, int *i);
 void	ft_move_enemy(t_init_map *data);
 void	ft_check_way(t_init_map *data, char c);
 void	ft_move_l(t_init_map *data, int *j, int *i);
@@ -104,6 +103,7 @@ void	ft_check_format(t_init_map *data);
 void	ft_check_wall(t_init_map *data);
 char	*ft_str_join(char const *s1, char const *s2);
 void	*ft_memmove(void *dest, const void *src, size_t len);
+void	free_map(t_init_map *data);
 char	*ft_strdup(const char *s1);
 void	*ft_memcpy(void *dest, const void *src, size_t len);
 

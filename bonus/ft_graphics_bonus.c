@@ -6,7 +6,7 @@
 /*   By: lshonta <lshonta@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 20:28:55 by lshonta           #+#    #+#             */
-/*   Updated: 2021/12/14 19:03:48 by lshonta          ###   ########.fr       */
+/*   Updated: 2021/12/14 19:59:49 by lshonta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,9 @@ void	ft_lose(t_init_map *data)
 		data->lenght * 40 / 2.4, data->hight * 40 / 4);
 }
 
-void    ft_win(t_init_map *data)
+void	ft_win(t_init_map *data)
 {
-    mlx_clear_window(data->mlx, data->win);
+	mlx_clear_window(data->mlx, data->win);
 	mlx_put_image_to_window(data->mlx, data->win, data->graph->winner,
 		data->lenght * 40 / 2.4, data->hight * 40 / 4);
 }
