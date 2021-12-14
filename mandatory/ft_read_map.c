@@ -6,7 +6,7 @@
 /*   By: lshonta <lshonta@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/03 19:15:11 by lshonta           #+#    #+#             */
-/*   Updated: 2021/12/14 17:23:59 by lshonta          ###   ########.fr       */
+/*   Updated: 2021/12/14 19:16:06 by lshonta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	ft_map_hight(t_init_map *data)
 		data->lenght++;
 	while (line)
 	{
-		if (ft_strlen(line) != data->lenght)
+		if ((int)ft_strlen(line) != data->lenght)
 		{
 			printf("Error.Map not valide");
 			exit(EXIT_FAILURE);

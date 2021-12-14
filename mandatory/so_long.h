@@ -6,18 +6,18 @@
 /*   By: lshonta <lshonta@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/03 17:38:42 by lshonta           #+#    #+#             */
-/*   Updated: 2021/12/14 15:57:16 by lshonta          ###   ########.fr       */
+/*   Updated: 2021/12/14 19:18:07 by lshonta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SO_LONG_H
 # define SO_LONG_H
-# define WALL "../pictures/wall.xpm"
-# define EMPTY "../pictures/empty.xpm"
-# define PLAYER "../pictures/player.xpm"
-# define EXIT "../pictures/exit.xpm"
-# define COLLECT "../pictures/collect.xpm"
-# define WIN "../pictures/winner.xpm"
+# define WALL "./pictures/wall.xpm"
+# define EMPTY "./pictures/empty.xpm"
+# define PLAYER "./pictures/player.xpm"
+# define EXIT "./pictures/exit.xpm"
+# define COLLECT "./pictures/collect.xpm"
+# define WIN "./pictures/winner.xpm"
 # define ESC 53
 # define W 13
 # define A 0

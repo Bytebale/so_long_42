@@ -6,7 +6,7 @@
 /*   By: lshonta <lshonta@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 23:19:38 by lshonta           #+#    #+#             */
-/*   Updated: 2021/12/14 17:23:23 by lshonta          ###   ########.fr       */
+/*   Updated: 2021/12/14 19:28:42 by lshonta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -143,7 +143,7 @@ void	ft_next_lvl(t_init_map *data)
 	
 	mlx_clear_window(data->mlx, data->win);
 	mlx_destroy_window(data->mlx, data->win);
-	ft_map_data(data, "../maps/next_lvl.ber");
+	ft_map_data(data, "maps/next_lvl.ber");
 	ft_map_hight(data);
 	ft_read_map(data);
 	ft_check(data);

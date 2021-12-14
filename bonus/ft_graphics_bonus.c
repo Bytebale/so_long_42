@@ -6,7 +6,7 @@
 /*   By: lshonta <lshonta@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 20:28:55 by lshonta           #+#    #+#             */
-/*   Updated: 2021/12/14 18:35:46 by lshonta          ###   ########.fr       */
+/*   Updated: 2021/12/14 19:03:48 by lshonta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_print_steps(t_init_map *data)
 	char	*moves;
 
 	moves = ft_itoa(data->step);
-	mov = ft_strjoin_bl("Step: ", moves);
+	mov = ft_str_join("Step: ", moves);
 	mlx_string_put(data->mlx, data->win, 2 * 40 + 1,
 		0, 0x00FF0000, mov);
 	free(mov);

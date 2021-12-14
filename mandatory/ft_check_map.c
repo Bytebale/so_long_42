@@ -6,7 +6,7 @@
 /*   By: lshonta <lshonta@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 23:19:38 by lshonta           #+#    #+#             */
-/*   Updated: 2021/12/13 16:46:46 by lshonta          ###   ########.fr       */
+/*   Updated: 2021/12/14 19:11:19 by lshonta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,6 +102,7 @@ void	ft_char_set(t_init_map *data)
 
 	i = 0;
 	j = 0;
+	ex = 0;
 	while (data->map[j])
 	{
 		i = 0;

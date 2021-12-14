@@ -6,7 +6,7 @@
 /*   By: lshonta <lshonta@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/07 17:59:53 by lshonta           #+#    #+#             */
-/*   Updated: 2021/12/14 00:39:29 by lshonta          ###   ########.fr       */
+/*   Updated: 2021/12/14 19:15:34 by lshonta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,7 @@
 
 int	ft_exit(t_init_map *data)
 {
-	// int	i;
-
-	// i = 0;
-	// while (i < data->hight)
-	// {
-	// 	free(data->map[i]);
-	// 	data->map[i] = NULL;
-	// 	i++;
-	// }
-	// free(data->map);
-	// data->map = NULL;
-	// data->graph->collect = NULL;
-	// data->graph->empty = NULL;
-	// data->graph->exit = NULL;
-	// data->graph->player = NULL;
-	// data->graph->wall = NULL;
-	// data->graph->winner = NULL;
-	// free(data->graph);
-	// data->graph = NULL;
+	(void) *data;
 	exit(EXIT_SUCCESS);
 }
 

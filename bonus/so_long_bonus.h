@@ -6,21 +6,21 @@
 /*   By: lshonta <lshonta@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/03 17:38:42 by lshonta           #+#    #+#             */
-/*   Updated: 2021/12/14 18:31:21 by lshonta          ###   ########.fr       */
+/*   Updated: 2021/12/14 19:20:42 by lshonta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SO_LONG_BONUS_H
 # define SO_LONG_BONUS_H
-# define WALL "../pictures/wall.xpm"
-# define EMPTY "../pictures/empty.xpm"
-# define PLAYER "../pictures/player.xpm"
-# define EXIT "../pictures/exit.xpm"
-# define COLLECT "../pictures/collect.xpm"
-# define WIN "../pictures/winner.xpm"
-# define ENEMY "../pictures/enemy.xpm"
-# define ENEMY_A "../pictures/enemy1.xpm"
-# define LOSER "../pictures/loser.xpm"
+# define WALL "./pictures/wall.xpm"
+# define EMPTY "./pictures/empty.xpm"
+# define PLAYER "./pictures/player.xpm"
+# define EXIT "./pictures/exit.xpm"
+# define COLLECT "./pictures/collect.xpm"
+# define WIN "./pictures/winner.xpm"
+# define ENEMY "./pictures/enemy.xpm"
+# define ENEMY_A "./pictures/enemy1.xpm"
+# define LOSER "./pictures/loser.xpm"
 # define ESC 53
 # define W 13
 # define A 0
@@ -83,7 +83,6 @@ void	ft_map_hight(t_init_map *data);
 void	ft_create_map(t_init_map *data);
 void	put_empty_img(t_init_map *data, int *j, int *i);
 void	put_wall_img(t_init_map *data, int *j, int *i);
-// void	put_wall_img(t_init_map *data, int j, int i);
 void	put_player_img(t_init_map *data, int *j, int *i);
 void	ft_draw_enemy(t_init_map *data, int *j, int *i);
 void	move_d(t_init_map *data);
@@ -103,6 +102,9 @@ void	ft_char_set(t_init_map *data);
 void	ft_check_char(t_init_map *data);
 void	ft_check_format(t_init_map *data);
 void	ft_check_wall(t_init_map *data);
-char	*ft_strjoin_bl(char const *s1, char const *s2);
+char	*ft_str_join(char const *s1, char const *s2);
+void	*ft_memmove(void *dest, const void *src, size_t len);
+char	*ft_strdup(const char *s1);
+void	*ft_memcpy(void *dest, const void *src, size_t len);
 
 #endif

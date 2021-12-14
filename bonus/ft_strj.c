@@ -1,5 +1,17 @@
-# include "so_long_bonus.h"
-# include "../gnl/get_next_line.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strj.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lshonta <lshonta@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/12/14 19:08:23 by lshonta           #+#    #+#             */
+/*   Updated: 2021/12/14 19:24:56 by lshonta          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "so_long_bonus.h"
+#include "../gnl/get_next_line.h"
 
 void	*ft_memcpy(void *dest, const void *src, size_t len)
 {
@@ -54,7 +66,7 @@ void	*ft_memmove(void *dest, const void *src, size_t len)
 	return (dest);
 }
 
-char	*ft_strjoin_bl(char const *s1, char const *s2)
+char	*ft_str_join(char const *s1, char const *s2)
 {
 	size_t	s1_len;
 	size_t	s2_len;
