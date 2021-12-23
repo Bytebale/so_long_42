@@ -6,7 +6,7 @@
 /*   By: lshonta <lshonta@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/13 22:59:24 by lshonta           #+#    #+#             */
-/*   Updated: 2021/12/14 15:15:50 by lshonta          ###   ########.fr       */
+/*   Updated: 2021/12/23 22:21:18 by lshonta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 42
 # endif
+
 char	*get_next_line(int fd);
 size_t	ft_strlen(const char *str);
 char	*ft_strjoin(char *memory, char *tmp);
