@@ -6,7 +6,7 @@
 /*   By: lshonta <lshonta@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 23:19:38 by lshonta           #+#    #+#             */
-/*   Updated: 2021/12/23 22:44:14 by lshonta          ###   ########.fr       */
+/*   Updated: 2021/12/27 18:57:39 by lshonta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void	ft_check_wall(t_init_map *data)
 	}
 	if (err > 0)
 	{
-		printf("Error.Check walls");
+		printf("Error.\nCheck walls");
 		exit(EXIT_FAILURE);
 	}
 }
@@ -52,7 +52,7 @@ void	ft_check_format(t_init_map *data)
 	len = ft_strlen(data->fn);
 	if (len < 3)
 	{
-		printf("Error.Check file extansion");
+		printf("Error.\nCheck file extansion");
 		exit(EXIT_FAILURE);
 	}
 	i = len - 3;
@@ -60,7 +60,7 @@ void	ft_check_format(t_init_map *data)
 	{
 		if (data->fn[i] != ber[j])
 		{
-			printf("Error.Check file extansion");
+			printf("Error.\nCheck file extansion");
 			exit(EXIT_FAILURE);
 		}
 		i++;
@@ -85,7 +85,7 @@ void	ft_check_char(t_init_map *data)
 				i++;
 			else
 			{
-				printf("Error.char not valid");
+				printf("Error.\nInvalid char at map");
 				exit(EXIT_FAILURE);
 			}
 		}
@@ -120,7 +120,7 @@ void	ft_char_set(t_init_map *data)
 	}
 	if (data->count == 0 || data->player == 0
 		|| ex == 0 || data->player > 1)
-		printf("Map error"), exit(EXIT_FAILURE);
+		printf("Error.\n Map invalid"), exit(EXIT_FAILURE);
 }
 
 void	ft_game_result(t_init_map *data)

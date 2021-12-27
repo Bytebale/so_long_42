@@ -6,7 +6,7 @@
 /*   By: lshonta <lshonta@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/03 17:38:50 by lshonta           #+#    #+#             */
-/*   Updated: 2021/12/14 20:01:35 by lshonta          ###   ########.fr       */
+/*   Updated: 2021/12/27 18:54:51 by lshonta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,7 +94,7 @@ int	main(int argc, char **argv)
 		ft_check(&data);
 		data.lvl = 0;
 		data.win = mlx_new_window(data.mlx, data.lenght * 40,
-				data.hight * 40, "cucumber");
+				data.hight * 40, "so_long");
 		mlx_hook(data.win, 17, 0, ft_exit, &data);
 		mlx_hook(data.win, 02, 0, press_key, &data);
 		mlx_loop_hook(data.mlx, ft_frame, &data);
