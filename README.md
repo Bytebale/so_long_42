@@ -15,7 +15,7 @@ $ make clean                                // clear Obj files.
 $ make fclean                               // clear all
 // after making mandatory or bonus part
 $ ./so_long ./maps/map.ber                  // if mandatory part
-$ ./so_long_bonus ./maps/map.ber            //if bonus part
+$ ./so_long_bonus ./maps/map.ber            // if bonus part
 ```
 
 ## Game
